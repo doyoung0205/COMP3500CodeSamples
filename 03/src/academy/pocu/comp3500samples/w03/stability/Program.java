@@ -27,6 +27,7 @@ public class Program {
 
         booksCopy = copyBooks(books);
 
+        // Arrays.sort 는 내부적으로 병합정렬을 사용하는데 안정성이 보장 된다.
         Arrays.sort(booksCopy, Comparator.comparingInt(Book::getID));
 
         printBooks(booksCopy);
@@ -46,7 +47,7 @@ public class Program {
         System.out.println("--------------Books--------------");
 
         for (Book book : books) {
-            System.out.println(String.format("%d. %s", book.getID(), book.getTitle()));
+            System.out.printf("%d. %s%n", book.getID(), book.getTitle());
         }
 
         System.out.println("--------------end--------------");

@@ -18,6 +18,8 @@ public class Program {
 
         Arrays.sort(nums);
 
+        printNums(nums);
+
         int minDiff = Integer.MAX_VALUE;
         int num1 = 0;
         int num2 = 0;
